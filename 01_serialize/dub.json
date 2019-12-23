@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"claudio"
+	],
+	"copyright": "Copyright © 2019, claudio",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "serialize"
+}
