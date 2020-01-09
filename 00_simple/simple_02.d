@@ -13,5 +13,5 @@ struct A(string name, bool dynamic = true, size_t size = 0) {
 void main() {
     A!"nicholas" a;
     a.nicholas = 42;
-    // A!("deniro", false) b;
+    // A!("cage", false) b;
 }

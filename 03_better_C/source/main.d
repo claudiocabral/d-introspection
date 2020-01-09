@@ -15,7 +15,10 @@ struct http_handler {
     }
 }
 
-void main(string[] args) {
-    http_handler handler;
-    http_serve(handler, args);
+version(D_BetterC) {
+    extern(C) int main(int argc, char **argv) {
+        http_handler handler;
+        http_serve(handler, argc, argv);
+        return 0;
+    }
 }

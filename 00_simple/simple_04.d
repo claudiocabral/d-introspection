@@ -1,7 +1,9 @@
 import std.traits;
+import std.stdio;
 
 struct complex_tag {
     string value;
+    // make struct implicitly convertible to the data member value
     alias value this;
 }
 
@@ -18,7 +20,7 @@ void main() {
         // like a C #define macro
         enum tag = tags[0];
         static if (tag == "foo") {
-            pragma(msg, "found foo");
+            writeln("member " ~ member.stringof ~ " has tag " ~ tag);
         }
     }}
 }

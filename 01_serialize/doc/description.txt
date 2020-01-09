@@ -1,0 +1,16 @@
+Compile time and template metaprogramming are becoming increasingly important
+in C++, and are now part of the techniques developers need to know to use the
+language effectively. However, C++ is still evolving in those areas, and
+prominent members of the standards commit have many proposals which improve and
+expand such features.
+
+The D programming language, a younger descendant of C++, provides a unique
+insight into the future of C++, being an early implementer of many features
+like Ranges, contracts, scope guards, Introspection and Universal Function Call
+Syntax (UFCS). It's a fun, elegant language that which not only empowers the
+user to right efficient code quickly, it also lets us explore bleeding edge
+programming techniques that are not yet available in C++.
+
+Through out this talk, we'll explores D's compile time and meta programming
+features that will surely find their way into C++ in the future in one way or
+another.

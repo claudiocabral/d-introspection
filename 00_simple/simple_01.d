@@ -8,13 +8,17 @@ struct A(string parameter) {
 }
 
 void main() {
-    // parenthesis can be ommited
     A!"nicholas" a;
     A!"cage" b;
+
     // creates an alias for a symbol
     alias nicholas_type = A!"nicholas";
     nicholas_type c;
+
+    // like C++
     static assert(!is(typeof(a) == typeof(b)));
     static assert(is(typeof(a) == typeof(c)));
+
+    // compiler directives, msg prints a value at compile time
     pragma(msg, typeof(a));
 }
