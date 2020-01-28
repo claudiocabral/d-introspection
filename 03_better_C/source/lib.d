@@ -1,8 +1,6 @@
 import std.stdio;
-import std.conv;
 import std.traits;
 import std.meta;
-import core.stdc.string;
 
 struct on_request {
     string route = "";
@@ -10,12 +8,9 @@ struct on_request {
 
 alias IsRequestHandler(alias T) = hasUDA!(T, on_request); 
 
-void http_serve(T)(ref T t, int argc, char **argv) {
-    foreach (ref arg; argv[1..argc]) {
-        auto len = strlen(arg);
-        string a = cast(string)arg[0..len];
-        "%s\n".printf(a.ptr);
-dispatch: switch (a) {
+@nogc void http_serve(T)(ref T t, string[] args) {
+    foreach (ref arg; args) {
+dispatch: switch (arg) {
             static foreach(id; __traits(allMembers, T)) {{
                 alias member = __traits(getMember, T, id);
                 static if(IsRequestHandler!member) {

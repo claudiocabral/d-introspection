@@ -1,12 +1,10 @@
 {
-	"authors": [
-		"claudio"
-	],
-	"copyright": "Copyright © 2019, claudio",
-	"description": "A minimal D application.",
-	"license": "proprietary",
-	"name": "http_handler",
-  "dflags": [
-      "-betterC"
-  ]
+  "authors": [
+    "claudio"
+  ],
+  "copyright": "Copyright © 2019, claudio",
+  "description": "A minimal D application.",
+  "license": "proprietary",
+  "name": "http_handler",
+  "buildOptions": ["betterC"]
 }
