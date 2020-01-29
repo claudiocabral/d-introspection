@@ -11,9 +11,8 @@ void func(T)(T t) if (is(T == float)) {}
 
 /// main function can be declared void
 void main() {
-    // template parameters are deduced
     int a;
-    // but can be explicitly instantiated with !
+    // Instantiate a template with operator !
     func!(int)(a);
     // parenthesis can be ommited for 1 parameter
     func!int(a);
