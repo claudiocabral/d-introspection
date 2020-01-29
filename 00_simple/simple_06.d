@@ -9,5 +9,4 @@ void main() {
         float member2;
         long member3;
     }
-    st
 }
