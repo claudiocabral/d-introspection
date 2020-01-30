@@ -13,3 +13,6 @@ docs/
 *.obj
 *.lst
 .exrc
+
+serialize
+example_01
